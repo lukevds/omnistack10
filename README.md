@@ -1,0 +1,2 @@
+# Semana Omnistack 10
+Este é um projeto desenvolvido a partir da Semana Omnistack, décima edição, da Rocketseat. Apesar de ser uma cópia praticamente exata do que é criado pelo Diego Fernandes, professor dessas aulas, estou exibindo-o no Github para demonstrar minha capacidade de entender os conteúdo transmitido, para isso incluí as anotações que escrevi durante as aulas no arquivo "anotacoes.txt".

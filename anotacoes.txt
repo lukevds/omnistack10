@@ -1,0 +1,129 @@
+    Dia 1
+Banco de dados: MongoDB(não relacional)
+Backend: Node.js
+Frontend: React, React Native(mobile) e Expo
+
+Node.js: Executar código Javascript fora de um navegador, runtime
+
+Node.js e React são ferramentas comumente usadas por grandes empresas (Uber, Netflix), no entanto é importante lembrar que não é só por isso que elas são ferramentas apropriadas para um projeto.
+
+
+=======================
+    Dia 2
+Backend: É o que o usuário não encherga
+Regras de negócio; Conexão com o banco de dados; Envio de e-mail; Comunicação com webservices; Autenticação do usuário; Criptografia e segurança;
+
+RESTful: conjunto de regras de uma API
+
+JavaScriptObjectNotation(json): Estrutura de dados
+
+package.json armazena algumas características do objeto
+
+semantic versioning: nomenclatura da versão começa com "^"
+
+yarn.lock: cache, informações sobre os pacotes instalados nos projetos. Não é recomendável modificar
+
+Ao instalar express com o yarn vários outros pacotes recursivamente. Muitos pacotes dependem de outros
+
+node_modules: não deve ser alterada pelo desenvolvedor do projeto
+
+rota:parte do endereço do site após a barra. ex.: site.com/index.htm site.com/users
+
+função do express: facilitar criação de rotas
+
+request(requisição): quando se acessa uma rota de um site, se faz uma requisição ao servidor. Essa requisição pode ter informações
+
+nodemon: pacote que observa mudanças no projeto em execução
+
+Principais métodos HTTP:
+>>>get post put delete
+
+Tipos de parâmetros do Express:
+>>>query params: request.query. maioria das vezes utilizado no método GET, ficam visiveis na url da aplicação. filtros, ordenação, paginação, etc.
+>>>route params: request.params. maioria das vezes utilizado nos métodos PUT e DELETE. Identificar um recurso na alteração ou remoção.
+>>>body: request.body. Dados para criação ou alteração de um registro.
+
+semanticidade dos métodos HTTP faz parte dos conceitos RESTful
+
+index.js e routes.js ficam dentro de /src
+/models fica dentro de /src
+
+routes.js armazena as rotas da aplicação
+/models armazena as entidades do banco de dados. modelagem
+
+/utils : utilidade para o BD
+
+/src/controllers : recebe requisição, realiza os procedimentos necessários e dá uma resposta. Responsável por tratar com o BD
+
+Não é recomendável deixar as regras de negócio dentro do controlador.
+
+A rota pode ser a mesma que outra desde que os métodos HTTP sejam diferentes.
+
+O controlador tem no máximo cinco funções: index, show, store, update e destroy
+
+Atalho do VSCode para modificar próxima string idêntica: ctrl + D
+
+DRY - Don't Repeat Yourself
+
+=======================
+    Dia 3:
+    
+Abordagem tradicional: backend lida com regra de negócio, baco de dados e apresentação (html, css)
+
+Abordagem de Single-Page Application(SPA): Começou a ficar forte entre 2012 e 2013. O backend lida apenas dados, o frontend é responsável pela apresentação. A página não recarrega. Uso de JSON. Diversas plataformas: mobile, web, nativo.
+
+Frameworks Javascript: Node(backend), React(frontend), Vue(frontend) e Angular(frontend)
+
+yarn create react-app web -> auxilia na criação de um projeto com React, instalando automaticamente as dependências necessárias
+
+diretório /public : arquivos que devem ser disponibilizados publicamente
+
+/public/index.html : tem pouca coisa. Div com id "root"
+
+Frameworks js: toda parte visual é gerada a partir de javascript.
+
+React suporta sintaxe de importação "ES Modules"
+
+Importa-se o React em todo arquivo js que utilizar html dentro dele. App.js está funcionando sem essa importação por enquanto, provavelmente por causa da diferença entre versões.
+
+JSX = JS + XML
+
+ReactDOM = React se comunica com o html, árvore de elementos (DOM).
+
+App.js -> função que retorna conteúdo html
+
+Três principais conceitos do React:
+    Componente
+    Estado
+    Propriedade
+
+>>>Componente:
+App é um componente. É uma função que retorna conteúdo html. Capitalização da primeira letra do nome de componentes. Um componente por arquivo. Bloco isolado de HTML, CSS e JS o qual não interfere no restante da aplicação.
+
+>>>Propriedade:
+Nome autoexplicativo. Espécie de atributo. Recebido como argumento ("props") na função de componente React.
+
+Inserir conteúdo JS dentro do html -> uso de chaves {}
+
+Não se pode ter vários componentes em uma única função, para mitigar isso usa-se outro componente como encapsulador. Fragment, componente sem nada dentro (<> </>)
+
+>>>Estado:
+Informação que componente manipulará. Funções dentro da função componente. React não monitora alterações de variáveis dentro do componente. Biblioteca useState. Imutabilidade, nunca alterar um dado e sim criar um novo dado. Informações mantidas pelo componente (imutabilidade).
+
+Programação imperativa.
+
+=======================
+    Dia 4:
+    
+Abordagem tradicional mobile: Uma aplicação para iOS e uma para Android.
+
+Abordagem React Native: Aplicação criada em Javascript, que será rodado nativamente em cada SO. Desempenho próxima ao nativo.
+
+Expo: Não é necessário Android Studio ou Xcode.
+
+=======================
+    Dia 5:
+
+Enviar informação do backend para o frontend sem requisição.
+
+Protocolo WebSocket
